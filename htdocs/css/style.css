@@ -66,11 +66,13 @@ td { vertical-align: top; }
    Author: 
    ========================================================================== */
 
-body {color:#444;}
+body {
+  color: #333;
+  font-size: 100%;
+}
 
 #main {
   margin: 2em;
-  line-height: 150%;
 }
 
 ul.bibl {
@@ -80,11 +82,17 @@ ul.bibl {
   text-indent: -1em;
 }
 
+ul.bibl li {
+  margin-top: 0.5em;
+}
+
 span.label-cite {
   font-weight: bold;
 }
 
-
+ul.bibl li a img {
+  vertical-align: top;
+}
 
 
 
