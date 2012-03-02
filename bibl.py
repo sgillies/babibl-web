@@ -11,13 +11,11 @@ template = Template(open("template.html").read())
 bibl = defaultdict(list)
 for row in csv.DictReader(open("bibl.csv")):
     key = unicode(row['short_new'], "utf-8")
-    letter = unidecode(key)[0].capitalize()
+    letter = unidecode(key)[0].lower()
     bibl[letter].append(
         (key, 
          unicode(row['long'], "utf-8"), 
          [unicode(s, "utf-8") for s in row['shorts'].split("; ")] ))
-
-import pdb; pdb.set_trace()
 
 for letter in sorted(bibl.keys()):
     items = sorted(bibl[letter])

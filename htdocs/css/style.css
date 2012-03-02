@@ -71,7 +71,7 @@ body {
   font-size: 100%;
 }
 
-#main {
+#main, #footer {
   margin: 2em;
 }
 

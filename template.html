@@ -15,6 +15,7 @@
 
   <!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"/>
   <!-- end CSS-->
 
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -30,12 +31,12 @@
 
     </header>
     <div id="main" role="main">
-    <h1>Barrington Atlas Bibliography: {{ letter }}</h1>
+    <h1>Barrington Atlas Bibliography: {{ letter|capitalize }}</h1>
     <p>Last modified: {{ modified }}.</p>
     <p>Code and bibliographic data on GitHub: <a href="http://github.com/isawnyu/babibl-web">http://github.com/isawnyu/babibl-web</a>.
     <p>Name index: 
     {% for char in keys %}
-    <a href="{{ char }}.html">{{ char }}</a>
+    <a href="{{ char }}.html">{{ char|capitalize }}</a>
     {% endfor %}
     </p>
     <hr/>
@@ -53,6 +54,9 @@
     </ul>
     </div>
     <footer>
+    <footer id="footer">
+      <div class="rights">Some rights reserved (cc-by) Ancient World Mapping Center, Institute for the Study of the Ancient World and the Pleiades Contributors</div>
+    </footer>
     </footer>
   </div> <!--! end of #container -->
 
